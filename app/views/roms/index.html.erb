@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roms.each do |rom| %>
+      <tr>
+        <td><%= rom.name %></td>
+        <td><%= rom.image_url %></td>
+        <td><%= link_to 'Show', rom %></td>
+        <td><%= link_to 'Edit', edit_rom_path(rom) %></td>
+        <td><%= link_to 'Destroy', rom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rom', new_rom_path %>

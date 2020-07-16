@@ -1,0 +1,2 @@
+class Rom < ApplicationRecord
+end

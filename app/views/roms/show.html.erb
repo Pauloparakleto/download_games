@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rom.name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @rom.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_rom_path(@rom) %> |
+<%= link_to 'Back', roms_path %>
