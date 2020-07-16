@@ -69,6 +69,6 @@ class RomsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def rom_params
-      params.require(:rom).permit(:name, :image_url)
+      params.require(:rom).permit(:name, :image_url, :zip_file)
     end
 end

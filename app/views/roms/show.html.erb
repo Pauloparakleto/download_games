@@ -7,8 +7,8 @@
 
 <p>
   <strong>Image url:</strong>
-  <%= @rom.image_url %>
+  <%= image_tag @rom.image_url %>
 </p>
-
+<%= button_to 'Download game', '#'%>
 <%= link_to 'Edit', edit_rom_path(@rom) %> |
 <%= link_to 'Back', roms_path %>
