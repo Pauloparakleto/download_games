@@ -15,7 +15,7 @@
     <% @roms.each do |rom| %>
       <tr>
         <td><%= rom.name %></td>
-        <td><%= rom.image_url %></td>
+        <td><%= image_tag rom.image_url %></td>
         <td><%= link_to 'Show', rom %></td>
         <td><%= link_to 'Edit', edit_rom_path(rom) %></td>
         <td><%= link_to 'Destroy', rom, method: :delete, data: { confirm: 'Are you sure?' } %></td>

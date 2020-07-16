@@ -1,5 +1,5 @@
 class RomsController < ApplicationController
-  before_action :set_rom, only: [:show, :edit, :update, :destroy]
+  before_action :set_rom, only: [:show, :edit, :update, :destroy, :download]
 
   # GET /roms
   # GET /roms.json
@@ -59,6 +59,10 @@ class RomsController < ApplicationController
       format.html { redirect_to roms_url, notice: 'Rom was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def download
+    redirect_to rails_blob_path(@rom.zip_file, disposition: "attachment")
   end
 
   private

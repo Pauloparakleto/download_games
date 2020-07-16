@@ -9,6 +9,6 @@
   <strong>Image url:</strong>
   <%= image_tag @rom.image_url %>
 </p>
-<%= button_to 'Download game', '#'%>
+<%= button_to 'Save game', {action: 'download', id: @rom.id }, method: :get, id: 'btn' %>
 <%= link_to 'Edit', edit_rom_path(@rom) %> |
 <%= link_to 'Back', roms_path %>
