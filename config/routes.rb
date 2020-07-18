@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'user/new'
   root to: 'roms#index'
   get 'download/:id', to: 'roms#download', as: 'download'
   resources :roms
