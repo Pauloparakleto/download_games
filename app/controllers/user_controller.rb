@@ -13,8 +13,8 @@ class UserController < ApplicationController
     if @user.password == params[:password]
       give_token
     else
-      redirect_to home_url
+      redirect_to admin_home_path
     end
   end
-  
+
 end
