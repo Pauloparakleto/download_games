@@ -1,2 +1,19 @@
 <h1>User#new</h1>
 <p>Find me in app/views/user/new.html.erb</p>
+
+<%= form_with model: @users, class: "nifty_form" do |f| %>
+<div>
+<p>User name</p>
+<%= f.text_field :name %>
+</div>
+<div>
+<p>Password</p>
+<%= f.password_field :password %>
+</div>
+<p>Password confirmation</p>
+<%= f.password_field :password_confirmation %>
+</div>
+<div>
+<%= f.submit "Create user"%>
+</div>
+<% end %>
