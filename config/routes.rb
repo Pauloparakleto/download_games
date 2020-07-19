@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'signup', to: 'user#new', as: 'signup'
+  post 'signup', to: 'user#create'
   root to: 'admin_home', to: 'roms#index', as: 'admin_home'
   get 'download/:id', to: 'roms#download', as: 'download'
   resources :roms
