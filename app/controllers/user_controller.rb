@@ -8,7 +8,13 @@ class UserController < ApplicationController
     @user.name = params[:name]
     @user.password = params[:password]
     @user.password_confirmation = params[:password_confirmation]
-    @user.save!
+    if @user.save!
+      flash[:notice] = "Created User successfully!"
+      redirect_to login_path
+    else
+      render :new
+      flash[:alert] = "Invalid something!"
+    end
   end
 
   def login
