@@ -1,65 +1,128 @@
-body {
-  background-color: #fff;
-  color: #333;
-  margin: 33px; }
+.background{
+  background-image: url(https://res.cloudinary.com/dilwtauny/image/upload/v1593225263/roms_images/img-noise-361x370_vsennj.png);
+}
+.conteiner{
+  text-align: center;
+}
+article{
+  margin-top: 30px;
+}
+.rom-name{
+  font-size: initial;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+}
+.rom-image{
+  width: 180px;
+  text-align: center;
+}
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+.show-section{
+  text-align: center;
+  margin-top: 10px;
+}
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px; }
+.rom-image-show{
+  width: 200px;
+}
 
-a {
-  color: #000; }
+header{
+  padding-top: 15px;
+  text-align: center;
+  background-color: #73bc95;
+}
 
-a:visited {
-  color: #666; }
-
-a:hover {
-  color: #fff;
-  background-color: #000; }
-
-th {
-  padding-bottom: 5px; }
-
-td {
-  padding: 0 5px 7px; }
-
-div.field,
-div.actions {
-  margin-bottom: 10px; }
-
-#notice {
-  color: green; }
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table; }
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px 7px 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0; }
-
-#error_explanation h2 {
-  text-align: left;
+header a{
+  font-size: large;
   font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px -7px 0;
-  background-color: #c00;
-  color: #fff; }
+  color: #3a62bc;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
 
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square; }
+header h2{
+  font-size: larger;
+  font-weight: bold;
+  color: #3d3e42;
+}
 
-label {
-  display: block; }
+header p{
+  font-size: smaller;
+}
+header .advertisement{
+  font-size: smaller;
+}
+
+header .banner{
+  background-color: #fddc4c;
+  height: 70px;
+}
+
+@media (max-width: 379px){
+
+  header .logo{
+      padding-bottom: 10px;
+      width: 40px;
+      text-align: center;
+  }
+  
+}
+
+@media (min-width: 380px) and (max-width: 899px){
+  section{
+      height: 1000px;
+  }
+  .conteiner{
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  article{
+      float: left;
+      width: 50%;
+      margin-right: auto;
+      margin-right: auto;
+      max-width: 550px;
+  }
+
+  header{
+      text-align: center;
+  }
+
+  header .logo{
+      padding-bottom: 10px;
+      width: 45px;
+      text-align: center;
+  }
+}
+
+@media (min-width: 900px){
+  .conteiner{
+      text-align: center;
+      width: 820px;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .rom-image{
+      width: 180px;
+  }
+  .rom-name{
+      width: 180px;
+      font-size: small;
+  }
+  article{
+      float: left;
+      width: 25%;
+      margin-right: auto;
+      margin-right: auto;
+      max-width: 550px;
+  }
+
+  header .logo{
+      padding-bottom: 10px;
+      width: 47px;
+      text-align: center;
+  }
+}
