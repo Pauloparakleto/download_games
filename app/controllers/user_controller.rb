@@ -13,7 +13,7 @@ class UserController < ApplicationController
       redirect_to login_path
     else
       redirect_to signup_path
-      flash[:alert] = "Invalid something!"
+      flash[:alert] = "Invalid! #{@user.errors.full_messages.join}."
     end
   end
 
