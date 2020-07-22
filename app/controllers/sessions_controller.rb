@@ -16,4 +16,11 @@ class SessionsController < ApplicationController
       redirect_to login_path
     end
   end
+
+  def destroy
+    session[:user_id] = nil
+    session[:user_name] = nil
+    flash[:success] = "Successfully Logged Out!"
+    redirect_to '/login'
+   end
 end
