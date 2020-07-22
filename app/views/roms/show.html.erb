@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
+<section class="show-section">
+<main>
+<%= image_tag @rom.image_url, class: 'rom-image-show' %>
+</main>
 
-<p>
-  <strong>Name:</strong>
-  <%= @rom.name %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag @rom.image_url %>
-</p>
+<h2 class="rom-name"><%= @rom.name %></h2>
+<div>
 <%= button_to 'Save game', {action: 'download', id: @rom.id }, method: :get, id: 'btn' %>
-<%= link_to 'Edit', edit_rom_path(@rom) %> |
+</div>
+
+<%= link_to 'Edit', edit_rom_path(@rom) %>
 <%= link_to 'Back', roms_path %>
