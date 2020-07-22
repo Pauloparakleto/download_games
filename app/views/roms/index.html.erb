@@ -1,4 +1,5 @@
 <section>
+<%= link_to 'New Rom', new_rom_path %>
 <main class="conteiner">
 <% @roms.each do |rom| %>
 <% if rom.image_url==nil%>
@@ -16,6 +17,7 @@
     </article>
     <% end %>
 <% end %>
+<%= link_to 'New Rom', new_rom_path %>
 </main>
 </section>
 <footer>
