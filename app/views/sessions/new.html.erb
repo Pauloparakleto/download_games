@@ -1,13 +1,14 @@
+<div class= "login-box">
 <%= form_with model: @sessions, class: "nifty_form" do |f| %>
-<div>
-<p>User name</p>
-<%= f.text_field :name %>
+<div class="submit-box">
+<h2 class="submit-box">User name</h2>
+<%= f.text_field :name, class: "submit-box" %>
+</h2>
+<div class="submit-box">
+<h2 class="submit-fields">Password</h2>
+<%= f.password_field :password, class: "submit-box" %>
+</h2>
 </div>
-<div>
-<p>Password</p>
-<%= f.password_field :password %>
-</div>
-<div>
-<%= f.submit "Login"%>
-</div>
+<%= f.submit "Login", class: "submit-box"%>
 <% end %>
+</div>
