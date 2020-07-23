@@ -1,5 +1,5 @@
 class RomsController < ApplicationController
-  before_action :authenticate_use
+  #before_action :authenticate_use
   before_action :set_rom, only: [:show, :edit, :update, :destroy, :download]
 
   # GET /roms
