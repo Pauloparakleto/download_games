@@ -5,7 +5,7 @@
 
 <h2 class="rom-name"><%= @rom.name %></h2>
 <div>
-<%= button_to 'Save game', {action: 'download', id: @rom.id }, method: :get, id: 'btn' %>
+<%= button_to 'Download game', {action: 'download', id: @rom.id }, method: :get, id: 'btn' %>
 </div>
 
 <%= link_to 'Edit', edit_rom_path(@rom) %>

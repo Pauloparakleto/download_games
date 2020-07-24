@@ -11,9 +11,6 @@
   </head>
 
   <body class= "background">
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
   <% if flash[:alert] %>
     <div class="alert"><%= flash[:alert] %></div>
   <% end %>
@@ -26,13 +23,13 @@
       </div>
       
       <div class="links-header">
-      <%= link_to "Roms", "#", class: "link-header-roms" %>
+      <%= link_to "Roms", roms_path, class: "link-header-roms" %>
       <%= link_to "Emulators", "#", class: "link-header-emulators" %>
       <%= link_to "Help", "#", class: "link-header-help" %>
-      </div>
-      <div>
       <div class="rom-page-title"><h2>Super Nintendo (SNES) ROMs </h2></div>
-      <div class="banner"><p>Que oferta incrível do mercado livre!</p></div>
+      </div>
+      <div class="banner">
+      <h2 class="advertisement">Que oferta incrível do mercado livre!</h2>
       </div>
     </header>
     <%= yield %>
