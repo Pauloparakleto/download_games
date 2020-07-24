@@ -1,9 +1,4 @@
 <section>
-<%= link_to 'Login', login_path unless session[:user_name] %>
-<% if session[:user_name]%>
-<%= link_to 'Logout', logout_path %>
-<%= link_to 'New Rom', new_rom_path %>
-<%end%>
 <main class="conteiner">
 <% @roms.each do |rom| %>
 <% if rom.image_url==nil%>
@@ -29,5 +24,9 @@
 </main>
 </section>
 <footer>
-   Footer
+<%= link_to 'Login', login_path unless session[:user_name] %>
+<% if session[:user_name]%>
+<%= link_to 'Logout', logout_path %>
+<%= link_to 'New Rom', new_rom_path %>
+<%end%>
 </footer>
