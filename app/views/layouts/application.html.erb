@@ -11,6 +11,24 @@
   </head>
 
   <body class= "background">
+  <header>
+    <div>
+      <%= link_to(image_tag('https://res.cloudinary.com/dilwtauny/image/upload/v1593318214/roms_images/cogumelo_mario_y6o23j.png', class: 'logo'), root_path)  %>
+    </div>
+      <div>
+      <%= search_field_tag "Search", "Search for games..." %>
+      </div>
+      
+      <div class="links-header">
+      <%= link_to "Roms", "#", class: "link-header-roms" %>
+      <%= link_to "Emulators", "#", class: "link-header-emulators" %>
+      <%= link_to "Help", "#", class: "link-header-help" %>
+      </div>
+      <div>
+      <div class="rom-page-title"><h2>Super Nintendo (SNES) ROMs </h2></div>
+      <div class="banner"><p>Que oferta incrível do mercado livre!</p></div>
+      </div>
+    </header>
   <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
