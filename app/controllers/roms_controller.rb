@@ -63,6 +63,7 @@ class RomsController < ApplicationController
   end
 
   def download
+    sleep(12)
     rom_path_download
   end
 

@@ -6,7 +6,9 @@
 <h2 class="rom-name"><%= @rom.name %></h2>
 <div>
 <%= button_to 'Download game', {action: 'download', id: @rom.id }, method: :get, id: 'btn' %>
+<h2 id="countdown"></h2>
 </div>
+
 
 <%= link_to 'Edit', edit_rom_path(@rom) %>
 <%= link_to 'Back', roms_path %>
@@ -16,11 +18,10 @@ document.getElementById("btn").addEventListener("click", function(){
     var timeleft = 10;
 
     var downloadTimer = setInterval(function function1(){
-    document.getElementById("countdown").innerHTML = timeleft + 
-    "&nbsp"+"seconds remaining";
+    document.getElementById("countdown").innerHTML = timeleft + " seconds to download...";
 
     timeleft -= 1;
-    if(timeleft <= 0){
+    if(timeleft <= -2){
         clearInterval(downloadTimer);
         document.getElementById("countdown").innerHTML = ""
     }
