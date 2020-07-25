@@ -20,13 +20,14 @@
     <%= form.label :image_url %>
     <%= form.text_field :image_url %>
   </div>
+  
+  <div class="field">
+    <%= form.label :zip_file_link %>
+    <%= form.text_field :zip_file_link %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
-
-  <%= form_for rom do |f| %>
-  <%= form.text_field :zip_file, direct_upload: true %>
-  <% end %>
 
 <% end %>
