@@ -10,3 +10,23 @@
 
 <%= link_to 'Edit', edit_rom_path(@rom) %>
 <%= link_to 'Back', roms_path %>
+
+<script>
+document.getElementById("btn").addEventListener("click", function(){
+    var timeleft = 10;
+
+    var downloadTimer = setInterval(function function1(){
+    document.getElementById("countdown").innerHTML = timeleft + 
+    "&nbsp"+"seconds remaining";
+
+    timeleft -= 1;
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        document.getElementById("countdown").innerHTML = ""
+    }
+    }, 1000);
+
+    console.log(countdown);
+});    
+
+</script>
