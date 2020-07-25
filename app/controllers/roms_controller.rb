@@ -63,7 +63,7 @@ class RomsController < ApplicationController
   end
 
   def download
-    redirect_to rails_blob_path(@rom.zip_file, disposition: "attachment")
+    rom_path_download
   end
 
   private
@@ -74,6 +74,10 @@ class RomsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def rom_params
-      params.require(:rom).permit(:name, :image_url, :zip_file)
+      params.require(:rom).permit(:name, :image_url, :zip_file_link)
+    end
+
+    def rom_path_download
+      redirect_to url_for(@rom.zip_file_link)
     end
 end
