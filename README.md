@@ -45,3 +45,5 @@ Technical considerations:
 This application follows a Model View Controller architecture (the MVC).
 The files containing the games are stored in a Google Storage Service.
 The application has in its database just the link to the cloud service, but it is hidden inside a private method.
+
+There is not bootstrap styles here, The programmer did it by his own in order to exercise.
