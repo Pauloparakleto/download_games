@@ -5,7 +5,9 @@ class RomsController < ApplicationController
   # GET /roms
   # GET /roms.json
   def index
-    @roms = Rom.all
+    @rom_first_id = Rom.first.id
+    @rom_last_id = Rom.last.id 
+    @roms = Rom.find((@rom_first_id..@rom_last_id).to_a)
   end
 
   # GET /roms/1
