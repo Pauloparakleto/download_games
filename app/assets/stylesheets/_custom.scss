@@ -7,6 +7,7 @@
   }
   article{
     margin-top: 30px;
+    height: 180px;
   }
   
   .rom-name{
@@ -88,10 +89,10 @@
         margin-right: auto;
     }
     article{
-        float: left;
         width: 50%;
-        //margin-right: auto;
-        max-width: 550px;
+        float: left;
+        margin-right: auto;
+        max-width: 560px;
     }
   
     header{
