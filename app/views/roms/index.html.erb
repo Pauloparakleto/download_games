@@ -12,8 +12,8 @@
     <%= link_to(image_tag(rom.image_url, class: 'rom-image'), rom_path(rom))  %>
     <h2 class="rom-name"><%= rom.name %></h2>
     <% if session[:user_name]%>
-    <%= link_to 'Edit', edit_rom_path(rom) %>
-    <%= link_to 'Destroy', rom, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Edit', edit_rom_path(rom), class: "rom-name" %>
+    <%= link_to 'Destroy', rom, method: :delete, data: { confirm: 'Are you sure?' }, class: "rom-name" %>
     <%end%>
     </article>
     <% end %>
