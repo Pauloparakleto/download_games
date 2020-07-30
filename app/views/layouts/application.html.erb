@@ -20,8 +20,7 @@
     </div>
       <div>
       <%= form_tag(search_path, method: "get") do %>
-      <%= label_tag(:q, "Search for:") %>
-      <%= text_field_tag(:q) %>
+      <%= text_field_tag(:q) %><br>
       <%= submit_tag("Search") %>
       <% end %>
       </div>
