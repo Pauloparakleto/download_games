@@ -19,7 +19,11 @@
       <%= link_to(image_tag('https://res.cloudinary.com/dilwtauny/image/upload/v1593318214/roms_images/cogumelo_mario_y6o23j.png', class: 'logo'), roms_path)  %>
     </div>
       <div>
-      <%= search_field_tag "Search", "Search for games..." %>
+      <%= form_tag(search_path, method: "get") do %>
+      <%= label_tag(:q, "Search for:") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %>
+      <% end %>
       </div>
       
       <div class="links-header">
