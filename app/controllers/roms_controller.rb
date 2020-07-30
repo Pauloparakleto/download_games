@@ -72,7 +72,7 @@ class RomsController < ApplicationController
   def search
     return redirect_to admin_home_path if params[:q].blank?
     @parameter = params[:q].downcase
-    @result = Rom.where("lower(name) LIKE :q", q: @parameter)
+    @result = Rom.limit(4).where("lower(name) LIKE :q", q: "%#{@parameter}%")
     
   end
 
