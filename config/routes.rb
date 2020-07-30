@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'signup', to: 'user#create'
   root to: 'admin', to: 'roms#index', as: 'admin_home'
   get 'download/:id', to: 'roms#download', as: 'download'
+  get '/search', to: 'roms#search', as: 'search'
   resources :roms
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
