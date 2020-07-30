@@ -35,6 +35,7 @@
     padding-top: 15px;
     text-align: center;
     background-color: #73bc95;
+    margin: 0;
   }
   
   header a{
@@ -59,11 +60,11 @@
     margin-top: 0px;
     padding-top: 60px;
   }
-  
-  .logo-div{
-    margin: 0;
-  }
 
+  .link-logo{
+    padding: 0;
+  }
+  
   header .banner{
     background-color: #fddc4c;
     height: 150px;
@@ -71,7 +72,7 @@
   
   @media (max-width: 379px){
   
-    header .logo{
+    .logo{
         padding-bottom: 10px;
         width: 40px;
         text-align: center;
