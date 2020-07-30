@@ -69,6 +69,13 @@ class RomsController < ApplicationController
     rom_path_download
   end
 
+  def search
+    return redirect_to admin_home_path if params[:q].blank?
+    @parameter = params[:q].downcase
+    @result = Rom.where("lower(name) LIKE :q", q: @parameter)
+    
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_rom
